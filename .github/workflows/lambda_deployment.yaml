@@ -22,7 +22,7 @@ jobs:
       run: |
         mkdir build
         pip install -r requirements.txt -t build/
-        cp lambda_function.py build/
+        cp app.py build/
 
     - name: Zip Lambda function
       run: |
