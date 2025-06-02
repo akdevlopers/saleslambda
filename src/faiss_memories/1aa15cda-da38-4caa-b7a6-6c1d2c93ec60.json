@@ -1,0 +1,355 @@
+{
+  "messages": [
+    {
+      "type": "human",
+      "data": {
+        "content": "vera ethavathu iruka?",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n[\n  {\n    \"name\": \"Black Forever Games T-shirt\",\n    \"variant_title\": \"Black Forever Games T-shirt\",\n    \"price\": \"Rs 489\",\n    \"id\": \"Black Forever Games T-shirt\",\n    \"images\": [\n      \"https://mayilo.in/admins/public/uploads/productimages/4.png\"\n    ],\n    \"product_suggestion\": true,\n    \"reply\": \"We also have the Black Forever Games T-shirt. It's made from 100% combed cotton and is available in sizes S to XXL. Customers love the comfortable fabric!\"\n  }\n]\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "wo kon ae",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"Besides Batman, Flash, Iron Man and Thor, we also have the Black Forever Games T-shirt. Is there any other character or brand you are looking for?\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "tumara naam kiya rei",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"I'm your customer support assistant. How can I help you today?\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "sugamano",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"Okay! We have T-shirts featuring Batman, Flash, Iron Man, Thor, and the Black Forever Games design. Are you looking for something similar, or perhaps a different character or style?\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "njan ninne premikunu",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"Can I help you find a gift or t-shirt for someone you love?\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "I love you?",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"That's very kind of you! Is there anything I can help you find today? Perhaps a gift for someone special?\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "yes",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "[\n  {\n    \"name\": \"Black Forever Games T-shirt\",\n    \"variant_title\": \"Black Forever Games T-shirt\",\n    \"price\": \"Rs 489\",\n    \"id\": \"Black Forever Games T-shirt\",\n    \"images\": [\n      \"https://mayilo.in/admins/public/uploads/productimages/4.png\"\n    ],\n    \"product_suggestion\": true,\n    \"reply\": \"Yes, I can help you with that! We have T-shirts featuring Batman, Flash, Iron Man, Thor, and the Black Forever Games design. Do any of these catch your eye, or are you looking for something else?\"\n  }\n]",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "what was my last message",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"Your last message was: yes\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "ok",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"Is there anything specific you'd like to do or any information you need? I'm here to help!\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "un products and services pathi solyu",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"We offer a variety of premium cotton T-shirts featuring popular characters and designs like Batman, Flash, Iron Man, Thor, and more. All our T-shirts are made in India with high-quality materials. Would you like to explore our collection further?\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "t shirt la cotton kuda ethavathu mix pannuvingala?",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"No, our T-shirts are made from 100% combed cotton. Would you like to see our available designs?\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "ok k",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"I'm ready to assist you! Do you have any specific questions or are you looking for something in particular?\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "mixing t shirt iruka",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"Currently, all our T-shirts are made from 100% combed cotton for premium comfort and quality. We don't offer mixed-material options at the moment. Is there anything else I can help you with?\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    }
+  ]
+}

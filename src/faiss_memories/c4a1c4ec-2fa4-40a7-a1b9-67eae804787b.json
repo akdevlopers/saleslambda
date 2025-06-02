@@ -1,0 +1,31 @@
+{
+  "messages": [
+    {
+      "type": "human",
+      "data": {
+        "content": "batman ?",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n[\n  {\n    \"name\": \"Batman Black T-shirt\",\n    \"variant_title\": \"Crew Neck\",\n    \"price\": \"Rs 489\",\n    \"id\": \"batman-black-tshirt-crew-neck#\",\n    \"images\": [\n      \"https://mayilo.in/admins/public/uploads/7oq03hgzmbs40888.png\"\n    ],\n    \"product_suggestion\": true,\n    \"reply\": \"Yes, we have the Batman Black T-shirt available! It's made of 100% cotton and comes in sizes S to XXL. Would you like to know more?\"\n  },\n  {\n    \"name\": \"Batman Grey T-shirt\",\n    \"variant_title\": \"T-Shirt\",\n    \"price\": \"Rs 489\",\n    \"id\": \"batman-grey-t-shirt\",\n    \"images\": [\n      \"https://mayilo.in/admins/public/uploads/BATMAN.jpg\"\n    ],\n    \"product_suggestion\": true,\n    \"reply\": \"We also have the Batman Grey T-shirt, which is also 100% cotton and available in sizes S to XXL.  Is this what you were looking for?\"\n  }\n]\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    }
+  ]
+}

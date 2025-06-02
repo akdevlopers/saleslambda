@@ -1,0 +1,58 @@
+{
+  "messages": [
+    {
+      "type": "human",
+      "data": {
+        "content": "thor t shirt",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n[\n  {\n    \"name\": \"Thor T-shirts\",\n    \"variant_title\": \"Thor T-shirts\",\n    \"price\": \"Rs 489\",\n    \"id\": \"Thor T-shirts\",\n    \"images\": [\"https://mayilo.in/admins/public/uploads/productimages/3.png\"],\n    \"product_suggestion\": true,\n    \"reply\": \"Yes, we have Thor T-shirts available! They are made of 100% combed cotton for a comfortable fit. Would you like to know what sizes are in stock?\"\n  }\n]\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "give the summary of our old chats",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"We were discussing T-shirts, and I suggested some character-themed options since we don't have any floral designs. You then showed interest in the Thor T-shirt. Is there anything specific you'd like to know or any other T-shirts you're interested in?\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    }
+  ]
+}

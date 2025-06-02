@@ -1,0 +1,31 @@
+{
+  "messages": [
+    {
+      "type": "human",
+      "data": {
+        "content": "show some tshirt images",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n[\n  {\n    \"name\": \"Thor T-shirts\",\n    \"variant_title\": \"S, M,L, XL, XXL\",\n    \"price\": \"Rs 489\",\n    \"id\": \"https://mayilo.in/thor-t-shirts\",\n    \"images\": [\"https://mayilo.in/admins/public/uploads/productimages/3.png\"],\n    \"product_suggestion\": true,\n    \"reply\": \"Here's an image of our Thor T-shirt. It's made of 100% combed cotton and comes in various sizes. Would you like to see more options?\"\n  },\n  {\n    \"name\": \"Batman Grey T-shirt\",\n    \"variant_title\": \"S, M,L, XL, XXL\",\n    \"price\": \"Rs 489\",\n    \"id\": \"https://mayilo.in/batman-grey-t-shirt\",\n    \"images\": [\"https://mayilo.in/admins/public/uploads/BATMAN.jpg\"],\n    \"product_suggestion\": true,\n    \"reply\": \"Here's an image of our Batman Grey T-shirt. It's made of 100% combed cotton and comes in various sizes. Would you like to see more options?\"\n  },\n  {\n    \"name\": \"Black Forever Games T-shirt\",\n    \"variant_title\": \"S, M,L, XL, XXL\",\n    \"price\": \"Rs 489\",\n    \"id\": \"https://mayilo.in/black-forever-games-t-shirt\",\n    \"images\": [\"https://mayilo.in/admins/public/uploads/productimages/4.png\"],\n    \"product_suggestion\": true,\n    \"reply\": \"Here's an image of our Black Forever Games T-shirt. It's made of 100% combed cotton and comes in various sizes. Would you like to see more options?\"\n  },\n  {\n    \"name\": \"Flash Black T-shirt Round Neck\",\n    \"variant_title\": \"S, M,L, XL, XXL\",\n    \"price\": \"Rs 489\",\n    \"id\": \"https://mayilo.in/flash-black-tshirt-round-neck\",\n    \"images\": [\"https://mayilo.in/admins/public/uploads/Flash_-_Black.png\"],\n    \"product_suggestion\": true,\n    \"reply\": \"Here's an image of our Flash Black T-shirt. It's made of 100% combed cotton and comes in various sizes. Would you like to see more options?\"\n  },\n  {\n    \"name\": \"Batman Black T-shirt\",\n    \"variant_title\": \"S, M,L, XL, XXL\",\n    \"price\": \"Rs 489\",\n    \"id\": \"https://mayilo.in/batman-black-tshirt-crew-neck#\",\n    \"images\": [\"https://mayilo.in/admins/public/uploads/7oq03hgzmbs40888.png\"],\n    \"product_suggestion\": true,\n    \"reply\": \"Here's an image of our Batman Black T-shirt. It's made of 100% combed cotton and comes in various sizes. Would you like to see more options?\"\n  },\n  {\n    \"name\": \"Iron Man Crew Neck - Black\",\n    \"variant_title\": \"S, M,L, XL, XXL\",\n    \"price\": \"Rs 489\",\n    \"id\": \"https://mayilo.in/Iron-Man-Crew-Neck-Black\",\n    \"images\": [\"https://mayilo.in/admins/public/uploads/qyvp7ir9uw0g4wc0.png\"],\n    \"product_suggestion\": true,\n    \"reply\": \"Here's an image of our Iron Man Crew Neck T-shirt. It's made of 100% combed cotton and comes in various sizes. Would you like to see more options?\"\n  }\n]\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    }
+  ]
+}

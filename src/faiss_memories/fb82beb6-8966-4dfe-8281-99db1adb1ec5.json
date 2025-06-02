@@ -1,0 +1,112 @@
+{
+  "messages": [
+    {
+      "type": "human",
+      "data": {
+        "content": "show me batman shirt",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n[\n  {\n    \"name\": \"Batman Grey T-shirt\",\n    \"variant_title\": \"Batman Grey T-shirt 100% combed cotton 180 GSM bio-washed fabric Made in India\",\n    \"price\": \"Rs 339\",\n    \"id\": \"Mayilo\",\n    \"product_link\": \"https://salegrowy.com/\",\n    \"images\": [\n      \"https://mayilo.s3.ap-south-1.amazonaws.com/1.png\"\n    ],\n    \"product_suggestion\": true,\n    \"reply\": \"Here's the Batman Grey T-shirt you asked for! It's made of 100% combed cotton. We also have a Navy Blue Batman Round Neck T-shirt. Would you like to see that as well?\"\n  },\n  {\n    \"name\": \"Navy Blue Batman Round Neck T-shirt\",\n    \"variant_title\": \"Navy Blue Batman Round Neck T-shirt\",\n    \"price\": \"Rs 339\",\n    \"id\": \"Mayilo\",\n    \"product_link\": \"https://salegrowy.com/\",\n    \"images\": [\n      \"https://mayilo.s3.ap-south-1.amazonaws.com/srzl7dn3y74kgsc8.png\"\n    ],\n    \"product_suggestion\": true,\n    \"reply\": \"Here's the Navy Blue Batman Round Neck T-shirt! It's also available in sizes S to XXL.  Is there anything else I can help you with?\"\n  }\n]\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "any thor?",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"I do not have any Thor shirts at the moment, but I can check for other superhero shirts if you'd like!\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "thor t shirt",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"I do not have any Thor shirts at the moment, but I can check for other superhero shirts if you'd like!\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "any thor?",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n[\n  {\n    \"name\": \"Thor T-shirts\",\n    \"variant_title\": \"Thor T-shirts\",\n    \"price\": \"Rs 339\",\n    \"id\": \"Mayilo\",\n    \"product_link\": \"https://salegrowy.com/\",\n    \"images\": [\n      \"https://mayilo.s3.ap-south-1.amazonaws.com/3.png\"\n    ],\n    \"product_suggestion\": true,\n    \"reply\": \"Yes, we have Thor T-shirts available! They come in sizes S to XXL. Would you like to see other superhero t-shirts as well?\"\n  }\n]\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    }
+  ]
+}

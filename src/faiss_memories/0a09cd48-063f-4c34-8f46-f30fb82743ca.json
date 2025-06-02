@@ -1,0 +1,58 @@
+{
+  "messages": [
+    {
+      "type": "human",
+      "data": {
+        "content": "hi",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"Hi there! I'm Kaira, your friendly shopping assistant. How can I help you today?\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "need t shorty",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n[\n  {\n    \"name\": \"White and Black Combo T-shirt\",\n    \"variant_title\": \"White and Black Combo T-shirt\",\n    \"price\": \"Rs 339\",\n    \"id\": \"Mayilo\",\n    \"product_link\": \"https://salegrowy.com/\",\n    \"images\": [\"https://mayilo.s3.ap-south-1.amazonaws.com/White_%2B_Black.jpg\"],\n    \"product_suggestion\": true,\n    \"reply\": \"We have a great selection of T-shirts! Here's a White and Black Combo T-shirt. Are there any particular colors or designs you're interested in?\"\n  },\n  {\n    \"name\": \"Flash Black T-shirt Round Neck\",\n    \"variant_title\": \"Flash Black T-shirt Round Neck\",\n    \"price\": \"Rs 339\",\n    \"id\": \"Mayilo\",\n    \"product_link\": \"https://salegrowy.com/\",\n    \"images\": [\"https://mayilo.s3.ap-south-1.amazonaws.com/j1c80m0m7eo0sw8k.png\"],\n    \"product_suggestion\": true,\n    \"reply\": \"Here is the Flash Black T-shirt Round Neck. Are there any particular colors or designs you're interested in?\"\n  },\n  {\n    \"name\": \"Iron Man Crew Neck - Black\",\n    \"variant_title\": \"Iron Man Crew Neck - Black 100% combed cotton 180 GSM bio-washed fabric Made in India\",\n    \"price\": \"Rs 339\",\n    \"id\": \"Mayilo\",\n    \"product_link\": \"https://salegrowy.com/\",\n    \"images\": [\"https://mayilo.s3.ap-south-1.amazonaws.com/qyvp7ir9uw0g4wc0.png\"],\n    \"product_suggestion\": true,\n    \"reply\": \"I have the Iron Man Crew Neck T-shirt in Black. Are there any particular colors or designs you're interested in?\"\n  },\n  {\n    \"name\": \"Batman Grey T-shirt\",\n    \"variant_title\": \"Batman Grey T-shirt 100% combed cotton 180 GSM bio-washed fabric Made in India\",\n    \"price\": \"Rs 339\",\n    \"id\": \"Mayilo\",\n    \"product_link\": \"https://salegrowy.com/\",\n    \"images\": [\"https://mayilo.s3.ap-south-1.amazonaws.com/1.png\"],\n    \"product_suggestion\": true,\n    \"reply\": \"I also found this Batman Grey T-shirt. Are there any particular colors or designs you're interested in?\"\n  }\n]\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    }
+  ]
+}

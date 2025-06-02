@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Excel for Chat content</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='1698535.png') }}" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body >
+        <nav class="bg-gray-800">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open main menu</span>
+          <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+          <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+          <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex shrink-0 items-center">
+          <img class="h-8 w-auto" src="{{ url_for('static', filename='1698535.png') }}" alt="Salegrowy AI Assistant">
+        </div>
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            <a href="https://ai-assistant.salegrowy.com" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
+            <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Upload contents</a>
+
+
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+
+
+</nav>
+<div class="bg-gray-100 min-h-screen flex items-center justify-center"> 
+  <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+    <h2 class="text-2xl font-bold mb-4 text-center">Upload Excel File for Chat Contents</h2>
+    
+    
+    <form id="upload-form" class="space-y-4">
+      <div>
+        <label for="faiss-id" class="block mb-2 text-sm font-medium text-gray-700">FAISS File ID</label>
+        <input type="text" id="faiss-id" name="faiss-id" required class="w-full px-3 py-2 border rounded-lg">
+      </div>
+      <div class="flex justify-end">
+          <a href="https://docs.google.com/spreadsheets/d/1T9RBKIWsHF817CDMr-I6Q1XYeh5sxDNpoK9HhmyBKwA/edit?usp=sharing"
+             target="_blank"
+             class="inline-block px-5 py-2 mb-5 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition duration-300">
+            📄 View Model Format
+          </a>
+      </div>
+
+      <div id="drop-area" class="w-full h-[150px] p-6 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50 cursor-pointer">
+        <p class="text-gray-500">Drag and drop an Excel file here or click to select one</p>
+        <input type="file" id="file-input" accept=".xls,.xlsx" class="hidden">
+      </div>
+
+      <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg">
+        Upload & Create Embedding
+      </button>
+    </form>
+
+    <div id="status" class="mt-4 text-center text-sm"></div>
+  </div>
+ </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const timestamp = Date.now(); // Gets the current timestamp in milliseconds
+      const input = document.getElementById('faiss-id');
+      input.value = `Faiss_file_${timestamp}`;
+    });
+  </script>
+  <script>
+    
+    const dropArea = document.getElementById('drop-area');
+    const fileInput = document.getElementById('file-input');
+    const form = document.getElementById('upload-form');
+    const status = document.getElementById('status');
+
+    // Click to open file dialog
+    dropArea.addEventListener('click', () => fileInput.click());
+
+    // Highlight on drag over
+    dropArea.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropArea.classList.add('bg-indigo-100');
+    });
+
+    dropArea.addEventListener('dragleave', () => {
+      dropArea.classList.remove('bg-indigo-100');
+    });
+
+    // Handle drop
+    dropArea.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropArea.classList.remove('bg-indigo-100');
+
+      const files = e.dataTransfer.files;
+      if (files.length === 0) {
+        status.textContent = '❌ No file dropped.';
+        return;
+      }
+
+      const file = files[0];
+      const validTypes = [
+        'application/vnd.ms-excel',
+        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+      ];
+
+      if (!validTypes.includes(file.type)) {
+        status.textContent = '❌ Invalid file type. Please upload a .xls or .xlsx file.';
+        return;
+      }
+
+      // Programmatically assign file to file input
+      const dataTransfer = new DataTransfer();
+      dataTransfer.items.add(file);
+      fileInput.files = dataTransfer.files;
+
+      status.textContent = `✅ File "${file.name}" ready for upload.`;
+    });
+
+    // Form submission
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const file = fileInput.files[0];
+      const faissId = document.getElementById('faiss-id').value.trim();
+
+      if (!file || !faissId) {
+        status.textContent = '❌ Please provide both FAISS File ID and a valid Excel file.';
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('excel', file);
+      formData.append('faiss_file_id', faissId);
+
+      status.textContent = '⏳ Uploading and processing...';
+
+      try {
+        const response = await fetch("{{ url_for('upload_excel') }}", {
+          method: 'POST',
+          body: formData,
+        });
+
+        const result = await response.json();
+        if (response.ok) {
+          status.textContent = `✅ Embedding created successfully with FAISS ID: ${result.faiss_file_id}`;
+        } else {
+          status.textContent = `❌ Error: ${result.error || 'Unknown error'}`;
+        }
+      } catch (err) {
+        console.error(err);
+        status.textContent = '❌ Upload failed. Please try again.';
+      }
+    });
+  </script>
+</body>
+</html>

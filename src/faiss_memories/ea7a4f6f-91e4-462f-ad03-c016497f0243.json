@@ -1,0 +1,193 @@
+{
+  "messages": [
+    {
+      "type": "human",
+      "data": {
+        "content": "hi",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"Hi there! How can I help you today?\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "i need tshirts",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"Yes, I can help with that! We have a wide variety of t-shirts. Are you looking for something specific, like plain, full sleeve, polo, or superhero themed?\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "any other ?",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"Yes, we also have round neck, combo t-shirts, hooded sweatshirts, zip-hoodies, sweatshirts, oversized standard t-shirts, and oversized hooded t-shirts. Is there anything in particular that you're interested in?\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "i need csk tshirt",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n[\n  {\n    \"name\": \"Dhoni Lightning Speed T-shirt\",\n    \"variant_title\": \"Default Title\",\n    \"price\": \"Rs Not Available\",\n    \"id\": \"Not Available\",\n    \"images\": [],\n    \"product_suggestion\": true,\n    \"reply\": \"Yes, we have the Dhoni Lightning Speed T-shirt! It's made of 100% combed cotton and has a premium feel. Would you like to know more?\"\n  },\n  {\n    \"name\": \"Captain Cool T-shirt\",\n    \"variant_title\": \"Default Title\",\n    \"price\": \"Rs Not Available\",\n    \"id\": \"Not Available\",\n    \"images\": [],\n    \"product_suggestion\": true,\n    \"reply\": \"We also have the Captain Cool T-shirt, made from cotton with a premium quality. Would you like to know more?\"\n  }\n]\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "hi",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n[\n  {\n    \"name\": \"Dhoni Lightning Speed T-shirt\",\n    \"variant_title\": \"Default Title\",\n    \"price\": \"Rs Not Available\",\n    \"id\": \"Not Available\",\n    \"images\": [],\n    \"product_suggestion\": true,\n    \"reply\": \"Yes, besides the Dhoni Lightning Speed and Captain Cool T-shirts, we can explore other CSK-themed designs. What other preferences do you have?\"\n  },\n  {\n    \"name\": \"Captain Cool T-shirt\",\n    \"variant_title\": \"Default Title\",\n    \"price\": \"Rs Not Available\",\n    \"id\": \"Not Available\",\n    \"images\": [],\n    \"product_suggestion\": true,\n    \"reply\": \"Yes, besides the Dhoni Lightning Speed and Captain Cool T-shirts, we can explore other CSK-themed designs. What other preferences do you have?\"\n  }\n]\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "i neeed csk t shirt",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"I am sorry, I do not have any CSK T-shirts available at the moment.\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "hi",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null,
+        "example": false
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "```json\n{\n  \"product_suggestion\": false,\n  \"reply\": \"I'm sorry, there are currently no CSK t-shirts available. I'll check again later!\"\n}\n```",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "example": false,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    }
+  ]
+}

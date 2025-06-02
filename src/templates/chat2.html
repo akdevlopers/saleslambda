@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Chat Assistant</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='1698535.png') }}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    .animate-pulse {
+      animation: pulse 1.5s infinite;
+    }
+  
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4F46E5',
+            secondary: '#F3F4F6',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <nav class="bg-gray-800">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open main menu</span>
+          <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+          <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+          <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex shrink-0 items-center">
+          <img class="h-8 w-auto" src="{{ url_for('static', filename='1698535.png') }}" alt="Salegrowy AI Assistant">
+        </div>
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+           <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Home</a>
+            <a href="https://ai-assistant.salegrowy.com/upload-inputs" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Upload contents</a>
+
+          </div>
+         
+        </div>
+      </div>
+      <div class="flex flex-1 items-end justify-end sm:items-stretch sm:justify-end">
+         <div>  
+            <select name="folder" id="folder" class="block w-full mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                    {% for folder in folders %}
+                        <option value="{{ folder }}">{{ folder }}</option>
+                    {% endfor %}
+            </select>
+            </div>
+      </div>
+    
+    </div>
+  </div>
+  
+
+</nav>
+
+  <div class="max-w-2xl mx-auto mt-10 shadow-xl rounded-xl bg-white overflow-hidden">
+    <div class="bg-primary text-white text-center py-4 text-2xl font-semibold">🛍️ Customer Support Assistant</div>
+
+    <div id="chatbox" class="p-4 h-[650px] overflow-y-scroll space-y-4">
+      <!-- Messages will appear here -->
+    </div>
+
+    <form id="chat-form" class="flex items-center gap-2 p-4 border-t">
+      <input
+        id="user-input"
+        type="text"
+        class="flex-1 p-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+        placeholder="Type a message..."
+        required
+      />
+      <button
+        type="submit"
+        class="bg-primary hover:bg-indigo-700 text-white px-4 py-2 rounded-xl transition"
+      >Send</button>
+    </form>
+  </div>
+  <script>
+    const chatbox = document.getElementById('chatbox');
+    const form = document.getElementById('chat-form');
+    const input = document.getElementById('user-input');
+    let typingIndicator;
+
+    let sessionId = sessionStorage.getItem('chat_session_id');
+    if (!sessionId) {
+      sessionId = crypto.randomUUID(); // Secure and modern way to generate UUID
+      sessionStorage.setItem('chat_session_id', sessionId);
+    }
+
+
+
+    function appendMessage(sender, text) {
+      const bubble = document.createElement('div');
+      bubble.className = sender === 'You' ? 'text-right' : 'text-left';
+      bubble.innerHTML = `
+        <div class="inline-block px-4 py-2 rounded-lg ${sender === 'You' ? 'bg-indigo-200' : 'bg-gray-200'} max-w-xs">
+          <strong>${sender}:</strong> <br>${text}
+        </div>
+      `;
+      chatbox.appendChild(bubble);
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+  
+    function renderProductCard(product) {
+      const card = document.createElement('div');
+      card.className = 'border p-4 rounded-lg shadow-md bg-white mb-4 max-w-xs';
+      card.innerHTML = `<a href="${product.product_link}" target="_blank">
+        <img src="${product.images?.[0] || 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg'}" alt="${product.name}" class="w-full h-50 object-cover rounded-md mb-2">
+        <h3 class="text-lg font-semibold">${product.name}</h3>
+        <p class="text-sm text-gray-700">Price: ₹${product.price}</p>
+        <p class="text-xs text-gray-500">${product.description || ''}</p>
+        <p class="text-xs text-gray-500">${product.reply || ''}</p>
+        </a>
+      `;
+      chatbox.appendChild(card);
+    }
+  
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const userMessage = input.value.trim();
+      if (!userMessage) return;
+        const folderSelect = document.querySelector('#folder');
+        let selectedFaissFileId = folderSelect.value; 
+  
+      appendMessage('You', userMessage);
+      input.value = '';
+      showTypingIndicator();
+      try {
+        const res = await fetch('https://ai-assistant.salegrowy.com/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: userMessage, faiss_file_id: selectedFaissFileId,session_id: sessionId }),
+        });
+  
+        const data = await res.json();
+        removeTypingIndicator();
+        // Check if it's a product suggestion or normal reply
+        if (data?.product_suggestion ) {
+
+          appendMessage('Bot', 'Here are some products you might like:');
+
+          data.products.forEach(renderProductCard);
+        } else if (typeof data === 'string') {
+          appendMessage('Bot', data);
+        } else if (data?.reply) {
+          appendMessage('Bot', data.reply);
+        } else {
+          appendMessage('Bot', '🤖 Unrecognized response format.');
+        }
+  
+      } catch (err) {
+        removeTypingIndicator();
+        appendMessage('Bot', '⚠️ Something went wrong. Please try again.');
+        console.error(err);
+      }
+    });
+
+
+    function showTypingIndicator() {
+    typingIndicator = document.createElement('div');
+    typingIndicator.className = 'text-left';
+    typingIndicator.innerHTML = `
+      <div class="inline-block px-4 py-2 rounded-lg bg-gray-300 animate-pulse max-w-xs">
+        <strong>Bot:</strong> <br>Typing...
+      </div>
+    `;
+    chatbox.appendChild(typingIndicator);
+    chatbox.scrollTop = chatbox.scrollHeight;
+  }
+
+  function removeTypingIndicator() {
+    if (typingIndicator) {
+      chatbox.removeChild(typingIndicator);
+      typingIndicator = null;
+    }
+  }
+
+  </script>
+  
+</body>
+</html>
